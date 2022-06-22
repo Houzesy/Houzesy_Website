@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+*{
+  font-family: 'Inter';
+}
+.carousel-main{
+  display:                flex; 
+  justify-content:        center; 
+
+}
+.carousel-slider{
+  background-color:     white;
+  width:                  100%;
+  height:                 90vh;
+  //border: 1px solid red;
+  //background-color: yellow;
+
+  position:               relative;
+  margin:                 0 ;
+  padding:                0 ;
+  display:                flex;
+  align-items:            center;
+  overflow:               hidden;
+
+}
+
+.carouselSlide{
+  //border: 1px solid blue;
+  position: relative;
+  min-width:              100%;
+  height:                 80%;
+  overflow:               hidden;
+  transition:             1s;
+   box-shadow:            0 2px 5px rgb(134, 114, 114);
+}
+%btn-styles{
+  position:               absolute;
+  width:                  40px;
+  height:                 40px;
+  border-radius:          50%;
+  top:                    50%;
+  transform:              translateY(-50%);
+  padding-top:5px;
+ // background:             none;
+  border:                 none;
+  outline:                none;
+  transition:             0.5s;
+  opacity:                0.5 ;
+  &:hover {
+    background:         rgba(0,0,0,0.356);
+    cursor:               pointer;
+    color: white;
+    opacity:1 ;
+  }
+}
+#btnLeft{
+  left :                  40px;
+  padding-left: 8px;
+  @extend %btn-styles;
+}
+
+#btnRight{
+  right:                  40px;
+  @extend %btn-styles;
+}
+
+.carosel-banner{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:none;
+  width: 100%;
+  height: 100%;
+ 
+}
+.carosel-banner div{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width:30%;
+  height: 60%;
+  padding: 30px;
+  background: linear-gradient(178.96deg, #FFFFFF 0.89%, rgba(255, 255, 255, 0) 99.13%);
+  box-shadow: 2px 2px 4px gray;
+  border: 1px solid #FFFFFF;
+  box-shadow: 2px 2px 10px 2px #ccc;
+  
+
+}
+.carosel-banner div h1{
+  color: #575757;
+  font-family: "Poppins";
+  font-size: 3rem;
+  font-weight: 600;
+
+}
+.carosel-banner div p{
+  color: #2D2D2D;
+  font-family: "Poppins";
+  font-size: 1.4rem;
+  text-align: left;
+  font-weight: 500;
+  margin-top: 20px;
+
+
+}
+
+#signInBtn{
+  position:               absolute;
+  left:                   11%;
+  bottom:                 20%;
+  z-index:                5;
+  appearance:             none;
+  outline:                0;
+  background-color:       #332FD0;
+  border:                 0;
+  padding:                10px 40px;
+  color:                white;
+  border-radius:          3px;
+  box-shadow: 1px 1px 3px black;
+  font-family:            "Inter", "sans-serif";
+  font-size:              15px;
+  &:hover{
+    background-color:   rgb(81, 89, 243);
+    cursor:               pointer;             
+  }
+  
+}
+//--------------------------------------max-width: 970px------------------------------------
+@media only screen and (max-width: 970px) {
+  #signInBtn{
+    left:                   11%;
+    bottom:                 20%;
+    padding:                5px 20px;
+    font-size:              15px;
+  
+  }
+}
+//--------------------------------------max-width: 850px------------------------------------
+@media only screen and (max-width: 850px) {
+  .carousel-slider{
+    height:                 60vh;
+
+  }
+  %btn-styles{
+    width:                  30px;
+    height:                 30px;
+   
+  }
+  .carosel-banner{
+    font-weight:            400;
+    font-size:              0.8rem;
+    
+  }
+  #signInBtn{
+    left:                   11%;
+    bottom:                 20%;
+    padding:                5px 20px;
+    font-size:              10px;
+  
+  }
+}
+
+//----------------------------------------------max-width: 650px--------------------
+@media only screen and (max-width: 650px) {
+  .carousel-slider{
+    height:                 50vh;
+
+  }
+  %btn-styles{
+    width:                  30px;
+    height:                 30px;
+   
+  }
+  .carosel-banner{
+    font-weight:            400;
+    font-size:              0.7rem;
+    
+  }
+  #signInBtn{
+    left:                   11%;
+    bottom:                 20%;
+    padding:                4px 15px;
+    font-size:              8px;
+  
+  }
+}
+
+
+//------------------------------------------------max-width: 380px--------------------------
+@media only screen and (max-width: 380px) {
+  .carousel-slider{
+    height:                 30vh;
+
+  }
+  %btn-styles{
+    width:                  30px;
+    height:                 30px;
+   
+  }
+  #btnLeft{
+    left :                  20px;
+    
+  }
+  
+  #btnRight{
+    right:                  20px;
+    
+  }
+  .carosel-banner{
+    font-weight:            400;
+    font-size:              0.7rem;
+    
+  }
+  #signInBtn{
+    left:                   11%;
+    bottom:                 20%;
+    padding:                2px 10px;
+    font-size:              8px;
+  
+  }
+}

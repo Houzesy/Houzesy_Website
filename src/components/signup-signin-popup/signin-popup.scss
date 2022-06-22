@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  font-family: 'Inter';
+}
+.popup-box{
+  position: fixed;
+  top:0px;
+  //right: 0px;
+  height:100%;
+  width: 100%;
+  z-index: 20;
+  //background-color: orange;
+  //backdrop-filter: contrast(40%);
+}
+
+.signin-popup-content{
+  position: fixed;
+  margin: -200px 450px;
+  background-color: white;
+  box-shadow: 1px 1px 3px #151D3B;
+  padding: 10px 40px;
+  width:300px !important;
+  height: 500px;
+  text-align: left; 
+  left: 450px;
+  top: 250px;
+}
+.signin-input-details{
+  padding: 5px;  
+  position: relative;
+  margin: -5px 450px;
+  color: black;
+  
+}
+.signin-cross-btn{
+  position: relative;
+  //bottom: 0px;
+  left: 210px;
+  &:hover{
+    cursor: pointer;
+    color: "#525E75"
+  }
+}
+
+.signin-heading{
+ margin-bottom: 20px;
+}
+.signin-para{
+  font-size: .8em;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+.signin-txt-input{
+  box-sizing: border-box;
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid #DFDFDE;
+}
+
+.signin-checkBox{
+  float: left;
+  width:15px;
+  height:15px;
+}
+.paraShowPw{
+  position: relative;
+  font-size: .8em;
+  display: inline;
+  margin-left: 5px;
+  
+}
+.forgetPass{
+  position: relative;
+  left: 25px;
+  font-size: .8em;
+  background: none;
+  border: none;
+  color: blue;
+  &:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+.popup-signin-btn{
+  box-sizing: border-box;
+  display: block;
+  background-color: #5432D3;
+  box-shadow: 1px 1px 3px black;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  min-width: 100%;
+  padding: 8px;
+  margin: 30px 0 10px 0;
+  &:hover{
+    background-color: #241E92;
+    cursor: pointer;
+  }
+}
+
+.hrLine{
+  display: inline-block;
+  width: 35%;
+  margin: 2px 10px;
+  border: none;
+  
+  border-bottom: 2px solid #9D9D9D;
+}
+.hrPara{
+  display: inline;
+  font-weight: 900;
+  margin: 8px;
+  color: #9D9D9D;
+}
+
+.googleLogo{
+  //border: .5px solid #DFDFDE;
+  box-shadow: 0.5px 0.5px 0.5px 1px #DFDFDE;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  min-width: 100%;
+  margin-top: 15px;
+  &:hover{
+    cursor: pointer;
+    color:blue;  
+    box-shadow: 0.5px 0.5px 0.5px 1px #9D9D9D; 
+  }
+}
+.g_para{
+  display: inline;
+  font-size: 0.8em;
+  margin-right: 0px;
+  margin-top: 0px;
+ 
+}
+.g_img{
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-left: 40px;
+  margin-top: 0px;
+}
+.signupBtn{
+  margin:20px 0px 20px 0px;
+  color: blue;
+  background: none; 
+  border: none;
+  &:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+
+
+ 
+ //-----------------------------------------------------max-width: 850px----------------------
+ @media only screen and (max-width: 850px) {
+  
+.inputDetails{
+  padding: 5px;  
+  margin: -5px 450px;
+
+}
+.crossBtn{
+  left: 175px;
+
+}
+.signin-popup-content{
+  margin: -200px -50px;
+  padding: 5px 30px;
+  width:180px;
+  height: 400px;
+  left: 500px;
+  top: 250px;
+}
+.signin-heading{
+  font-size: 15px;
+ margin-bottom: 5px;
+}
+.para{
+  font-size: .6em;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.signin-txt-input{
+  padding: 3px;
+  width: 100%;
+  font-size:0.7rem ;
+  margin-bottom: 10px;
+  border-radius: 5px;
+ 
+}
+.signin-checkbox{
+  width:10px;
+  height:10px;
+  margin-top: 10px;
+}
+.signin-show-pw{
+  font-size: .6em;
+  margin-left: 5px;
+  
+}
+.forgetPass{
+  left: 18px;
+  font-size: .6em;
+
+}
+.popup-signin-btn{
+  min-width: 100%;
+  padding: 5px;
+  margin: 20px 0 10px 0;
+ 
+}
+.hrLine{
+  width: 35%;
+  margin: 2px 5px;
+  
+}
+.hrPara{
+  font-weight: 900;
+  margin: 8px;
+  
+}
+
+.googleLogo{
+  padding: 0px;
+  border-radius: 10px;
+  margin-top: 15px;
+  
+}
+.g_para{
+  font-size: 0.5em;
+  margin-right: 30px;
+  margin-top: 0px;
+ 
+}
+.g_img{
+  width: 15px;
+  height: 15px;
+  margin-left: 30px;
+  margin-top: 7px;
+}
+.signupBtn{
+  margin:20px 0px 5px -50px;
+ 
+}
+}
+
+//-----------------------------------------------------max-width: 650px----------------------
+@media only screen and (max-width: 650px) {
+  
+  .inputDetails{
+    padding: 5px;  
+    margin: -5px 450px;
+  
+  }
+  .crossBtn{
+    left: 175px;
+  
+  }
+  .signin-popup-content{
+    margin: -200px -150px;
+    padding: 5px 30px;
+    width:180px;
+    left: 500px;
+    top: 250px;
+  }
+  .heading{
+    font-size: 15px;
+   margin-bottom: 5px;
+  }
+  .para{
+    font-size: .6em;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .txtInput{
+    padding: 3px;
+    width: 100%;
+    font-size:0.7rem ;
+    margin-bottom: 10px;
+    border-radius: 5px;
+   
+  }
+  .checkBox{
+    width:10px;
+    height:10px;
+    margin-top: 10px;
+  }
+  .paraShowPw{
+    font-size: .6em;
+    margin-left: 5px;
+    
+  }
+  .forgetPass{
+    left: 18px;
+    font-size: .6em;
+  
+  }
+  .signInBtn{
+    min-width: 100%;
+    padding: 5px;
+    margin: 20px 0 10px 0;
+   
+  }
+  .hrLine{
+    width: 35%;
+    margin: 2px 5px;
+    
+  }
+  .hrPara{
+    font-weight: 900;
+    margin: 8px;
+    
+  }
+  
+  .googleLogo{
+    padding: 0px;
+    border-radius: 10px;
+    margin-top: 15px;
+    
+  }
+  .g_para{
+    font-size: 0.5em;
+    margin-right: 30px;
+    margin-top: 0px;
+   
+  }
+  .g_img{
+    width: 15px;
+    height: 15px;
+    margin-left: 30px;
+    margin-top: 7px;
+  }
+  .signupBtn{
+    margin:20px 0px 5px -50px;
+   
+  }
+  }
+
+//------------------------------------------------max-width: 380px--------------------------
+@media only screen and (max-width: 380px) {
+  
+  
+  .inputDetails{
+    padding: 5px;  
+    margin: -5px 450px;
+  
+  }
+  .crossBtn{
+    left: 175px;
+  
+  }
+  .signin-popup-content{
+    margin: 0px 0px;
+    padding: 5px 30px;
+    width:180px;
+    left: 500px;
+    top: 250px;
+  }
+  .heading{
+    font-size: 15px;
+   margin-bottom: 5px;
+  }
+  .para{
+    font-size: .6em;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .txtInput{
+    padding: 3px;
+    width: 100%;
+    font-size:0.7rem ;
+    margin-bottom: 10px;
+    border-radius: 5px;
+   
+  }
+  .checkBox{
+    width:10px;
+    height:10px;
+    margin-top: 10px;
+  }
+  .paraShowPw{
+    font-size: .6em;
+    margin-left: 5px;
+    
+  }
+  .forgetPass{
+    left: 18px;
+    font-size: .6em;
+  
+  }
+  .signInBtn{
+    min-width: 100%;
+    padding: 5px;
+    margin: 20px 0 10px 0;
+   
+  }
+  .hrLine{
+    width: 35%;
+    margin: 2px 5px;
+    
+  }
+  .hrPara{
+    font-weight: 900;
+    margin: 8px;
+    
+  }
+  
+  .googleLogo{
+    padding: 0px;
+    border-radius: 10px;
+    margin-top: 15px;
+    
+  }
+  .g_para{
+    font-size: 0.5em;
+    margin-right: 30px;
+    margin-top: 0px;
+   
+  }
+  .g_img{
+    width: 15px;
+    height: 15px;
+    margin-left: 30px;
+    margin-top: 7px;
+  }
+  .signupBtn{
+    margin:20px 0px 5px -50px;
+   
+  }
+  
+
+}
