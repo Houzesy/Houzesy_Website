@@ -3,6 +3,8 @@ import "./signin-popup.scss";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import SignUpPopUp from "./signup-popup";
 import PopUpCarousel from "./popup-carousel";
+
+
 export default function LoginPopUp(props) {
   //---------------------Input Text (email,password) events------------------------
   let [inputTxt, setInputTxt] = useState({
@@ -23,29 +25,35 @@ export default function LoginPopUp(props) {
       return !prevValue;
     });
   }
-  //-----------------------------Sign up------------------------------
-  const [isSignup, setIsSignup] = useState(false);
-
-  function handleSignup(setSignupInputTxt) {
-    setIsSignup((prevValue) => {
-      return !prevValue;
-    });
-  }
 
   //--------------------------Clear Input Fields--------------------
   function handleClear() {
     setInputTxt("");
   }
 
-  //-----------------------Return Codes-----------------------------
+  
+//-----------------------Signup visibility-----------------------------
+  const [isSignupVisible, setIsSignupVisible] = useState(false);
+
+  function handleSignUp() {
+    setIsSignupVisible((prevValue) => {
+      return !prevValue;
+    });
+  }
+
+//-----------------------Return Codes-----------------------------
+
+
   return (
     <div
       className="popup-box"
       style={{
-        visibility: props.visible || isSignup ? "hidden" : "visible"
+        visibility: props.signInVisible || isSignupVisible ? "hidden" : "visible"
       }}
     >
-      <PopUpCarousel isVisible={props.visible} z={props.zValue} />
+      <PopUpCarousel isVisible={props.signInVisible} z={props.zValue} />
+      <SignUpPopUp signUpVisible={isSignupVisible} signInVisible= {props.signInVisible} handleSignUpCrossBtnClick={handleSignUp}/>
+
 
       <p className="inputDetails">{inputTxt.email}</p>
       <p className="inputDetails">{inputTxt.password}</p>
@@ -60,7 +68,7 @@ export default function LoginPopUp(props) {
             }
           }}
           onClick={() => {
-            props.clickHandle();
+            props.handleSignInCrossBtnClick();
             handleClear();
           }}
         />
@@ -106,13 +114,13 @@ export default function LoginPopUp(props) {
         <button
           className="signupBtn"
           onClick={() => {
-            handleSignup();
-            handleClear();
+            handleSignUp()
+            
           }}
         >
           Sign up
         </button>
-        <SignUpPopUp Signup={isSignup} onhandleSignup={handleSignup} />
+        {/* <SignUpPopUp Signup={isSignup} onhandleSignup={handleSignup} /> */}
       </div>
     </div>
   );

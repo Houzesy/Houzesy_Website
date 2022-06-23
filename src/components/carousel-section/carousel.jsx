@@ -18,10 +18,10 @@ export default function Carousel() {
   }
   
 
-  const [z, setZ] = useState(0);
-  function handleSlides() {
-    z === 0 ? setZ(-100 * (PopupImageData.length - 1)) : setZ(z + 100);
-  }
+  // const [z, setZ] = useState(0);
+  // function handleSlides() {
+  //   z === 0 ? setZ(-100 * (PopupImageData.length - 1)) : setZ(z + 100);
+  // }
   
   const [isVisible, setIsVisible] = useState(true);
 
@@ -33,7 +33,7 @@ export default function Carousel() {
 
   return (
     <div className="carousel-main">
-      <SignInPopUp visible={isVisible} clickHandle={handleClick} zValue={z} />
+      {/* <SignInPopUp visible={isVisible} clickHandle={handleClick} zValue={z} /> */}
 
       <div className="carousel-slider">
         {carouselData.map((item, index) => {
@@ -55,7 +55,7 @@ export default function Carousel() {
         <button id="btnRight" onClick={handelRight}>
           <ArrowForwardIosIcon className="arrow-icon" fontSize="large"/>
         </button>
-        <button
+        {/* <button
           id="signInBtn"
           onClick={() => {
             handleClick();
@@ -63,7 +63,7 @@ export default function Carousel() {
           }}
         >
           Sign-In
-        </button>
+        </button> */}
       </div>
     </div>
   );

@@ -1,10 +1,46 @@
-import React from "react";
+import React,{useState} from "react";
 import "./navbar.css";
 import logo from "./logo.png";
+import PopupImageData from "../signup-signin-popup/popup-image-data";
+import SignInPopUp from "../signup-signin-popup/signin-popup";
+import SignUpPopUp from "../signup-signin-popup/signup-popup";
+
 
 export default function NavBar() {
+
+  const [z, setZ] = useState(0);
+  function handleSlides() {
+    z === 0 ? setZ(-100 * (PopupImageData.length - 1)) : setZ(z + 100);
+  }
+  
+  const [isSigninVisible, setIsSigninVisible] = useState(true);
+
+  function handleSignIn() {
+    setIsSigninVisible((prevValue) => {
+      return !prevValue;
+    });
+  }
+
+
+  const [isSignupVisible, setIsSignupVisible] = useState(false);
+
+  function handleSignUp() {
+    setIsSignupVisible((prevValue) => {
+      return !prevValue;
+    });
+  }
+
+
+
+
+
+
+
   return (
     <div className="nav-wrapper-div">
+    <SignInPopUp signInVisible={isSigninVisible} handleSignInCrossBtnClick={handleSignIn} zValue={z} />
+    <SignUpPopUp signUpVisible={isSignupVisible} handleSignUpCrossBtnClick={handleSignUp} zValue={z} />
+
       <nav>
         <div className="wrapper">
           <div className="logo">
@@ -120,15 +156,23 @@ export default function NavBar() {
             </li>
             <li id="horizontal-line">|</li>
             <li>
-              <a href="#" className=" navbar-sign-in-btn">
-                
+              <a href="#" className=" navbar-sign-in-btn"  
+              onClick={() => {
+                 handleSignIn();
+                 handleSlides();
+              }} >
                 <input type="submit" value="Submit" className="text-right"/>
                 Sign in
               </a>
             </li>
             <li>
-              <a href="#" className="navbar-sign-up-btn">
-                
+            {/* <button className="navbar-sign-up-btn" onClick={handleClick}>Sign UP </button> */}
+              <a href="#" className="navbar-sign-up-btn"
+              onClick={() => {
+                handleSignUp();
+                handleSlides();
+              }}
+              >
                 <input type="submit" value="Submit" className="text-right" />
                 Sign up
               </a>

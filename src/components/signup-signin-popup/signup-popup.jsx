@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import "./signup-popup.scss";
+import PopUpCarousel from "./popup-carousel";
+
 
 export default function SignUpPopUp(props) {
   let [inputSignupTxt, setSignupInputTxt] = useState({
@@ -28,11 +30,19 @@ export default function SignUpPopUp(props) {
     setSignupInputTxt("");
   }
   //---------------------------Return Codes---------------------------
+
+
+
+
+
   return (
     <div
       className="signup-popup-box"
-      style={{ visibility: props.Signup ? "visible" : "hidden" }}
+      style={{ visibility: props.signUpVisible ? "visible" : "hidden" }}
     >
+      <PopUpCarousel isVisible={!props.signUpVisible} z={props.zValue} />
+
+
       <p className="signup-input-details">{inputSignupTxt.email}</p>
       <p className="signup-input-details">{inputSignupTxt.password}</p>
       <p className="signup-input-details">{inputSignupTxt.re_password}</p>
@@ -48,11 +58,10 @@ export default function SignUpPopUp(props) {
           }}
           // clearSignupText={}
           onClick={() => {
-            props.onhandleSignup();
+            props.handleSignUpCrossBtnClick();
             handleClear();
           }}
         />
-
         <h2 className="signup-heading">SIGN UP</h2>
         <p className="signup-para">Email</p>
         <input
