@@ -101,7 +101,7 @@ export default function LoginPopUp(props) {
         </button>
 
         <hr className="hrLine" />
-        <p className="hrPara">or</p>
+        <p className="hrPara">Or</p>
         <hr className="hrLine" />
         <div className="googleLogo">
           <img

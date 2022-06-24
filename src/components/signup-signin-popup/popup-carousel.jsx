@@ -2,6 +2,7 @@ import React from "react";
 import PopupImageData from "./popup-image-data.js";
 import PopupImageCarouselComp from "./popup-image-carousel-comp.jsx";
 import "./popup-carousel.scss";
+import HomeIcon from '@mui/icons-material/Home';
 
 export default function PopUpCarousel(props) {
   return (
@@ -11,6 +12,10 @@ export default function PopUpCarousel(props) {
         visibility: props.isVisible ? "hidden" : "visible"
       }}
     >
+    <div id="logo">
+      <HomeIcon id="homeIcon"/>
+      <h1>HOUZESY</h1>
+    </div>
       <div className="popup-carousel-slider">
         {PopupImageData.map((item, index) => {
           return (

@@ -22,7 +22,7 @@
 .signup-cross-btn{
   position: relative;
   //bottom: 0px;
-  left: 210px;
+  left: 270px;
   &:hover{
     cursor: pointer;
     color: "#525E75"
@@ -33,10 +33,10 @@
   margin: -200px 450px;
   //justify-items: left;
   background-color: white;
-  //border-radius: 0 20px;
-  box-shadow: 1px 1px 3px #151D3B;
+  border-radius: 5px;
+  box-shadow: 2px 3px 5px #151D3B;
   padding: 10px 40px;
-  width:300px;
+  width:350px;
   height: 500px;
   text-align: left; 
   left: 450px;
@@ -44,11 +44,18 @@
 }
 .signup-heading{
  margin-bottom: 20px;
+ font-weight: 600;
+ color: rgba(72, 72, 72, 1);
+
 }
 .signup-para{
   font-size: .8em;
-  font-weight: 900;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
   margin-bottom: 5px;
+  color: rgba(72, 72, 72, 1);
+
 }
 .signup-txt-input{
   box-sizing: border-box;
@@ -56,7 +63,7 @@
   width: 100%;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 2px solid #DFDFDE;
+  border: 1.27px solid rgba(220, 220, 220, 1);
 }
 
 .signup-check-box{
@@ -69,6 +76,8 @@
   font-size: .8em;
   display: inline;
   margin-left: 5px;
+  color: rgba(72, 72, 72, 1);
+
   
 }
 .signup-forget-pass{
@@ -86,17 +95,16 @@
 .popup-signup-btn{
   box-sizing: border-box;
   display: block;
-  background-color: #5432D3;
-  box-shadow: 1px 1px 3px black;
-
+  background-color: #5FD068;
+  box-shadow: 1px 1px 3px gray;
   border: none;
   border-radius: 10px;
   color: white;
   min-width: 100%;
   padding: 8px;
-  margin: 30px 0 10px 0;
+  margin: 50px 0 10px 0;
   &:hover{
-    background-color: #241E92;
+    background-color: #4B8673;
     cursor: pointer;
   }
 }
