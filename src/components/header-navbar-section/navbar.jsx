@@ -50,7 +50,7 @@ export default function NavBar() {
             <a href="#">HOUZ<span>ESY</span></a></div> */}
           <input type="radio" name="slider" id="menu-btn" />
           <input type="radio" name="slider" id="close-btn" />
-          <ul className="nav-links mx-auto">
+          <ul className="nav-links">
             <label for="close-btn" className="btn close-btn">
               <i className="fas fa-times"></i>
             </label>
